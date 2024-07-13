@@ -12,7 +12,31 @@ let heros = ["ironman", "hulk", "thor", "antman", "batman", "spiderman"];
 // console.log(heros.length);
 // console.log(typeof(heros));
 
-
+//foor loop
 for(let i=0; i<heros.length; i++){
     console.log(heros[i]);
 }
+
+
+// ............................................
+// for off loop
+
+for (let hero of heros) {
+    console.log(hero.toUpperCase());
+}
+
+
+console.log("-----------------------")
+
+let cities = ["dhaka","gopalganj","barishal","sylhet"];
+
+
+for(let city of cities){
+    console.log(city.toUpperCase());
+}
+
+
+
+
+// ....................................................
+
