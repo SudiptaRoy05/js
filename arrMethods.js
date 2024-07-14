@@ -57,3 +57,6 @@ let num = [1,2,3,4,5,6,7,8,9]
 num.splice(2,3, 43, 54);
 num.splice(2,0,3,4);
 console.log(num)
+
+
+// we can use splice method for add element delete element or replece element 
