@@ -26,11 +26,40 @@
 
 
 // breaking out of a for loop
-for(let c = 20; ; c++){
-    if(c % 7 == 0){
-        console.log(c);
+// for(let c = 20; ; c++){
+//     if(c % 7 == 0){
+//         console.log(c);
         
-        break;
-    }
+//         break;
+//     }
     
+// }
+
+
+let str = "sudipta";
+let size = 0;
+
+for (let val of str) {
+    console.log("value =", val)
+    size++;
+}
+
+console.log(size)
+
+
+let student ={
+    name : "sudipta",
+    age : 25,
+    isPass : true
+}
+
+for (const key in student) {
+   console.log( key,"=", student[key])
+}
+
+
+for(let i = 1; i<=100; i++){
+    if(i % 2 == 0){
+        console.log(i);
+    }
 }
