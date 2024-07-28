@@ -52,4 +52,20 @@ function multi(a = 2,b = 3){
     return a*b;
 }
 
-console.log(multi(5,8));
+console.log(multi());
+
+const arr2 = [2,4,6,8];
+const arr3 = [1,3,5,7]
+console.log([43,...arr2,90,56, ...arr3,0]);
+
+
+// rest parameters 
+
+
+function getInfo(a,...c){
+
+    console.log(a,c)
+    return 'sudiptass'
+}
+
+console.log(getInfo(1,2,3,4,5,1,2,3,4,5,1,2,3,4,5))
