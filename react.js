@@ -71,19 +71,18 @@ const personArr = [
     country: "bd",
   },
 
-
   {
     name: "REDOS",
     age: 27,
     country: "IN",
   },
- 
+
   {
     name: "sadhin",
     age: 26,
     country: "IN",
   },
- 
+
   {
     name: "Adi",
     age: 24,
@@ -98,31 +97,64 @@ let getAllNames = personArr.map((singlrPerson, index) => {
 });
 console.log(getAllNames);
 
-
-// find 
+// find
 
 // let getPersonFromIn = personArr.find((singlrPerson, index)=>{
 //     return singlrPerson.country === "IN";
 // })
 
-
-// filter 
-let getPersonFromIn = personArr.filter((singlrPerson,index)=>{
-    return singlrPerson.country === "IN";
-})
-
+// filter
+let getPersonFromIn = personArr.filter((singlrPerson, index) => {
+  return singlrPerson.country === "IN";
+});
 
 console.log(getPersonFromIn);
 
-// some 
+// some
 // let checkSomeArrMethodWithExamples = personArr.some((singlrPerson,index)=>{
 //     return singlrPerson.age > 250;
 // });
 
 // every
-let checkSomeArrMethodWithExamples = personArr.every((singlrPerson,index)=>{
-    return singlrPerson.age > 20;
+let checkSomeArrMethodWithExamples = personArr.every((singlrPerson, index) => {
+  return singlrPerson.age > 20;
 });
 
-
 console.log(checkSomeArrMethodWithExamples);
+console.log("::::::::::::::::::::::::::::::::::::::::::::::::::");
+// find index
+
+let getIndexFromPersonFromNP = personArr.findIndex((singlrPerson, index) => {
+  return singlrPerson.country === "Np";
+});
+console.log("The index is", getIndexFromPersonFromNP);
+
+console.log("--------------------------------------------");
+
+const fruit = ["apple", "banana", "orange"];
+
+console.log(fruit.includes("apple"));
+console.log(fruit.indexOf("banana"));
+
+let getListOfPruductsElement = document.querySelector(".list-of-products");
+
+function renderProducts(getProducts) {
+  getListOfPruductsElement.innerHTML = getProducts
+    .map((singlrProduct) => `<p>${singlrProduct.title}</p>`)
+    .join(" ");
+}
+
+async function fetchListOfProducts() {
+  try {
+    const apiResponce = await fetch("https://dummyjson.com/products", {
+      method: "GET",
+    });
+    const result = await apiResponce.json();
+    console.log(result);
+    if (result?.products?.length > 0) renderProducts(result?.products);
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+fetchListOfProducts();
